@@ -10,10 +10,25 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("data", (data) => {
-    console.log(data)
+    console.log(data);
+  });
+
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server")
+  });
+
+  conn.on("connect", () => {
+    conn.write("Name: Xav")
+    // conn.write("Move: up")
+    // setInterval(() => {
+    //   conn.write("Move: up")
+    // }, 50)
+
+
   })
+
 
   return conn;
 };
 
-module.exports = connect
+module.exports = connect;
