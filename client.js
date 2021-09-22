@@ -19,16 +19,10 @@ const connect = function () {
 
   conn.on("connect", () => {
     conn.write("Name: Xav")
-    // conn.write("Move: up")
-    // setInterval(() => {
-    //   conn.write("Move: up")
-    // }, 50)
-
-
   })
 
 
   return conn;
 };
 
-module.exports = connect;
+module.exports = { connect };
